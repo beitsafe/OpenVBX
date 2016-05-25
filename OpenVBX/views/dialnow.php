@@ -11,9 +11,10 @@
 					<div>
 						And here we made it the whole way.... didnt think we could do it huh? 
  						<?php 
- 						echo "lets do this for sanity's sake... to: ".$calltonum." and from: ".$callfromnum." ...see no issues with the data!";
- 						$html = "<script> $('document').ready(function(){OpenVBX.clientDial({'to': '".$calltonum."', 'callerid': '".$callfromnum."'});}); </script>";
- 						echo $html;
+ 						echo "lets do this for sanity's sake... to: ".$this->session->userdata('calltonum')." and from: ".$this->session->userdata('callfromnum')." ...see no issues with the data!";
+						print_r($this->session->all_userddata());
+						//$html = "<script> $('document').ready(function(){OpenVBX.clientDial({'to': '".$calltonum."', 'callerid': '".$callfromnum."'});}); </script>";
+ 						//echo $html;
  						?>
 					</div>
 			</div>
