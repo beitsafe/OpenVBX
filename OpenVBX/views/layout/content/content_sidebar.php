@@ -1,8 +1,8 @@
 		<div class="yui-b">
 				<div id="vbx-sidebar">
-				<?php if(isset($counts)): ?>
-					<div id="vbx-main-nav">
 
+					<div id="vbx-main-nav">
+				<?php if(isset($counts)): ?>
 						<h3 class="vbx-nav-title">Messages</h3>
 						<ul id="messages-nav" class="vbx-main-nav-items">
 						<?php foreach($counts as $id => $item):
@@ -19,7 +19,7 @@
 								</li>
 						<?php endforeach; ?>
 						</ul>
-
+				<?php endif; ?>
 						<?php if(!empty($setup_links)): ?>
 						<h3 class="vbx-nav-title">Setup</h3>
 						<ul id="setup-nav" class="vbx-main-nav-items">
@@ -78,6 +78,6 @@
 						<?php endforeach; ?>
 						<?php endif; ?>
 					</div><!-- #vbx-main-nav -->
-				<?php endif; ?>
+
 				</div><!-- #vbx-sidebar -->
 		</div><!-- .yui-b -->

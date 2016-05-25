@@ -103,6 +103,7 @@ $route['external'] = "external";
 $route['iphone/messages/details/(:any)'] = 'iphone/message_details/$1';
 $route['iphone'] = "iphone";
 $route['iframe'] = "iframe";
-
+//add my controller to route the load correctly
+$route['dialbrowser'] = "dialbrowser";
 /* End of file routes.php */
 /* Location: ./system/application/config/routes.php */
