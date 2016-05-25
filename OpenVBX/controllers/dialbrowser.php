@@ -26,6 +26,7 @@ class Dialbrowser extends User_Controller
 	public function dosomethingplease()
 	{
 		//would be a temporary fix if no issues with call/dialog/etc
+		echo "<script type='text/javascript'' src='//static.twilio.com/libs/twiliojs/1.2/twilio.min.js'></script>";
 		echo "<script   src='https://code.jquery.com/jquery-2.2.3.min.js'   integrity='sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo='   crossorigin='anonymous'></script>";
 		$data = array('calltonum' => $this->input->post('calltonum'), 'callfromnum' => $this->input->post('callfromnum'));
 		//where the first param below appends to title
