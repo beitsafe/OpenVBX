@@ -55,7 +55,7 @@
 <?php echo $_scripts; ?>
 <script type="text/javascript">
 //<![CDATA[
-	if (window == window.top && !window.location.href.match('\/auth\/') && !window.location.href.match('\/dialbrowser')) {
+	if (window == window.top && !window.location.href.match('\/auth\/')) {
 		$.cookie('last_known_url', window.location.href, 0, '/');
 		window.location = OpenVBX.home;
 	}
