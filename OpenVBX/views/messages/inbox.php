@@ -152,11 +152,9 @@
 		<?php endif; ?>
 
 	</div><!-- .vbx-content-main -->
-	<?php /*
-	if ($calltonum != null){
-		echo "<script   src='https://code.jquery.com/jquery-2.2.3.min.js'   integrity='sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo='   crossorigin='anonymous'></script>";
-		echo "<script> $('document').ready(function(){OpenVBX.clientDial({'to': '".$calltonum."', 'callerid': '+1864214-7822'});});</script>";
-	}
-	 
-	 */?>
+	<?php 
+	if ($this->session->userdata('calltonum') != null){?>
+	<script src='https://code.jquery.com/jquery-2.2.3.min.js' integrity='sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=' crossorigin='anonymous'></script>
+	<script> $('document').ready(function(){OpenVBX.clientDial({'to': '<?php echo $this->session->userdata('calltonum'); ?>', 'callerid': '+1864214-7822'});});</script>
+	<?php } ?>
 	

@@ -180,11 +180,13 @@ class Inbox extends User_Controller {
 
 	function index($group = false)
 	{
-		/*
-		if (($this->input->post('calltonum') != null) and ($this->input->post('callfromnum') != null)){
-			//echo"<script>console.log('we got this far');</script>";
-			$data = array('calltonum' => $this->input->post('calltonum'), 'callfromnum' => $this->input->post('callfromnum'));	
-		}*/
+		//prevent post data from being lost with redirect
+		if ($this->input->post('calltonum')){
+		$this->session->set_userdata('calltonum', $this->input->post('calltonum'));
+		}
+		if ($this->input->post('callfromnum')){
+		$this->session->set_userdata('callfromnum', $this->input->post('callfromnum'));
+		}
 		return $this->inbox($group);
 	}
 
